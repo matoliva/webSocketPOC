@@ -1,0 +1,18 @@
+<div>
+    <h1> WebSockets POC</h1>
+
+    <label for="server">Servidor: {{ server }}</label>
+
+    <h3> Message </h3>
+    <input type="text" [(ngModel)]="message">
+    <button (click)="sendMessage()">Send</button>
+
+    <h3>Sent messages</h3>
+    <ul>
+        <li *ngFor=' let message of messageSent '> {{ message }}</li>
+    </ul>
+    <h3>Received messages</h3>
+    <ul>
+        <li *ngFor=' let message of messageReceived '> {{ message }}</li>
+    </ul>
+</div>
